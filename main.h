@@ -12,11 +12,12 @@
 
 /* --------------Prototype--------------------*/
 int _printf(const char *format, ...);
+int _check(va_list list, char c);
 int _putchar(char c);
 int _strlen(char *s);
 int _print_str(char *str);
 int _print_bin(unsigned int n);
-int _print_unsigned(unsigned int n, int base, char *digit);
+int _print_unsigned_int(unsigned int n, int base, char *digit);
 int _print_int(int n);
 
 #endif
