@@ -1,19 +1,6 @@
 #include "main.h"
 
 /**
-* _putchar - prints a character into the standard output
-* @c: character
-*
-* by: Lailitaa & Megaa
-* Return: the character printed, Or EOF in error case
-*/
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
 * _printf - prints formatted strings and inputs into the standard output
 * @format: format of string
 *
@@ -64,4 +51,3 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (cmp);
 }
-
