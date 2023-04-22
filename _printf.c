@@ -10,8 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int cmp = 0;
+	int i = 0, cmp = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -37,6 +36,18 @@ int _printf(const char *format, ...)
 					break;
 				case 'b':
 					cmp += _print_bin(va_arg(list, unsigned int));
+					break;
+				case 'u':
+					cmp += _print_unsigned(va_arg(list, unsigned int), 10, "0123456789");
+					break;
+				case 'o':
+					cmp += _print_unsigned(va_arg(list, unsigned int), 8, "01234567");
+					break;
+				case 'x':
+					cmp += _print_unsigned(va_arg(list, unsigned int), 16, "0123456789abcdef");
+					break;
+				case 'X':
+					cmp += _print_unsigned(va_arg(list, unsigned int), 16, "0123456789ABCDEF");
 					break;
 				default:
 					cmp += _putchar('%');

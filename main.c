@@ -18,6 +18,10 @@ int main(void)
 	_printf("%c\n", 'm');
 	_printf("%d\n", 9);
 	_printf("binary %b\n", 98);
+	_printf("Unsigned:[%u]\n", 347698608);
+	_printf("Unsigned octal:[%o]\n", 6);
+	_printf("Unsigned hexadecimal:[%x, %X]\n", 9, 12);
+	_printf("Character:[%c]\n", 'H');
 	_printf("%%\n");
 	return (0);
 }

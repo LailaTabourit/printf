@@ -16,6 +16,7 @@ int _putchar(char c);
 int _strlen(char *s);
 int _print_str(char *str);
 int _print_bin(unsigned int n);
+int _print_unsigned(unsigned int n, int base, char *digit);
 int _print_int(int n);
 
 #endif
