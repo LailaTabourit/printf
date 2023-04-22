@@ -26,6 +26,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
+
 				cmp++;
 				cmp += _check(args, format[i]);
 			}
