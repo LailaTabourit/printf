@@ -20,21 +20,12 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '%')
-			{
 				cmp += _putchar('%');
-				cmp += _putchar(format[i]);
-			}
-			else
-			{
-
-				cmp++;
-				cmp += _check(args, format[i]);
-			}
+			cmp += _check(args, format[i]);
 		}
 		else
-		{
 			cmp += _putchar(format[i]);
-		}
+
 		i++;
 	}
 	va_end(args);
