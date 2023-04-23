@@ -21,7 +21,6 @@ int _print_int(int n)
 		cmp += _print_int(n / 10);
 
 	cmp += _putchar((n % 10) + '0');
-
 	return (cmp);
 }
 

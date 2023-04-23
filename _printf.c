@@ -10,7 +10,8 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, cmp = 0;
+	int i = 0;
+	int cmp = 0;
 	va_list args;
 
 	if (format == NULL)
@@ -28,10 +29,8 @@ int _printf(const char *format, ...)
 		}
 		else
 			cmp += _putchar(format[i]);
-
 		format++;
 	}
 	va_end(args);
-
 	return (cmp);
 }
