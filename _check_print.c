@@ -28,6 +28,7 @@ int _check(va_list list, char c)
 		return (_print_unsigned_int(va_arg(list, unsigned int), 16, x));
 	else if (c == 'X')
 		return (_print_unsigned_int(va_arg(list, unsigned int), 16, X));
-
+	else
+		return (-1);
 	return (0);
 }

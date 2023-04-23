@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			i++;
+			format++;
 			if (format[i] == '%')
 				cmp += _putchar('%');
 			cmp += _check(args, format[i]);
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		else
 			cmp += _putchar(format[i]);
 
-		i++;
+		format++;
 	}
 	va_end(args);
 
