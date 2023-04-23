@@ -10,40 +10,27 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, cmp = 0;
-	va_list list;
+	int i = 0;
+	int cmp = 0;
+	va_list args;
 
-	va_start(list, format);
+	if (format == NULL)
+		return (-1);
+
+	va_start(args, format);
 	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			switch (format[i])
-			{
-				case 'c':
-					cmp += _putchar(va_arg(list, int));
-					break;
-				case 's':
-					cmp += _print_str(va_arg(list, char *));
-					break;
-				case '%':
-					cmp += _putchar('%');
-					break;
-				case 'd':
-				case 'i':
-					cmp += _print_int(va_arg(list, int));
-					break;
-				default:
-					cmp += _putchar('%');
-					cmp += _putchar(format[i]);
-					break;
-			}
+			format++;
+			if (format[i] == '%')
+				cmp += _putchar('%');
+			cmp += _check(args, format[i]);
 		}
 		else
 			cmp += _putchar(format[i]);
-		i++;
+		format++;
 	}
-	va_end(list);
+	va_end(args);
 	return (cmp);
 }

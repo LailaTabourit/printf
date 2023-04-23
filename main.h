@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <unistd.h> /*---for write---*/
+#include <limits.h>
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
