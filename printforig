@@ -10,26 +10,25 @@
 
 int _printf(const char *format, ...)
 {
-	int cmp = 0;
+	int i = 0, cmp = 0;
 	va_list args;
 
 	va_start(args, format);
-	while (*format)
+	while (format[i])
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
-			format++;
-			if (*format == '%')
+			i++;
+			if (format[i] == '%')
 				cmp += _putchar('%');
-			cmp += _check(args, *format);
+			cmp += _check(args, format[i]);
 		}
 		else
-		{
-			_putchar(*format);
-			cmp++;
-		}
-		format++;
+			cmp += _putchar(format[i]);
+
+		i++;
 	}
 	va_end(args);
+
 	return (cmp);
 }
