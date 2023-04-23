@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <unistd.h> /*---for write---*/
 #include <stdlib.h>
+#include <stddef.h>
 #include <string.h>
 #include <math.h>
 
