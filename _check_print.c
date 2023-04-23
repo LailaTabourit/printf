@@ -9,7 +9,6 @@
 
 int _check(va_list list, char c)
 {
-
 	char *x = "0123456789abcdef";
 	char *X = "0123456789ABCDEF";
 
