@@ -4,7 +4,7 @@
 * _printf - prints formatted strings and inputs into the standard output
 * @format: format of string
 *
-* by: Lailitaaa & Megato
+* by: Lailitaaa & Megaa
 * Return: number of characters printed
 */
 
@@ -21,26 +21,17 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			format++;
+			i++;
 			if (format[i] == '%')
 				cmp += _putchar('%');
-			cmp += _check(args, *format);
+			cmp += _check(args, format[i]);
 		}
 		else
-		{
-			_putchar(format[i]);
-			cmp++;
-		}
-		format++;
+			cmp += _putchar(format[i]);
+
+		i++;
 	}
-	if (format[i] != '\0')
-	{
-		_putchar(format[i]);
-		_putchar(format[i + 1]);
-		cmp += 2;
-	}
-	else
-		return (-1);
 	va_end(args);
+
 	return (cmp);
 }
