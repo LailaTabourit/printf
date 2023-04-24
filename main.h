@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/*made by Lailalita and Megato*/
+
 #include <stdarg.h>
 #include <unistd.h> /*---for write---*/
 #include <limits.h>
