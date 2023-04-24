@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
+	if (format == NULL)
+		return (-1);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
@@ -24,8 +26,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+<<<<<<< HEAD
 			if (format[i] == '\0')
 				break;
+=======
+>>>>>>> 127e8dddc33738c2a8343b6e4d29b49bb41f3716
 			cmp += _check(args, format[i]);
 		}
 		else
