@@ -3,7 +3,7 @@
 /**
 * _printf - prints formatted strings and inputs into the standard output
 * @format: format of string
-*
+* helper - process a single conversion
 * by: Lailitaaa & Megaa
 * Return: number of characters printed
 */
@@ -24,9 +24,9 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
+			cmp += helper(*format, args, cmp);
+			if (cmp == -1)
 				return (-1);
-			cmp += _check(args, format[i]);
 		}
 		else
 			cmp += _putchar(format[i]);
