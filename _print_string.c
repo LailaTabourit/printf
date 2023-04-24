@@ -9,9 +9,9 @@
  * Return: string
  */
 
-int _print_string(char *s, char *x, char *X)
+int _print_string(char *s, char __attribute__((unused)) *x, char *X)
 {
-	int i, cmp = 0
+	int i, cmp = 0;
 
 	for (i = 0; s[i]; i++)
 	{
