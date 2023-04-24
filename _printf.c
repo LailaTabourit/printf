@@ -28,6 +28,11 @@ int _printf(const char *format, ...)
 				return (-1);
 			cmp += _check(args, format[i]);
 		}
+		else if (format[i] == '%')
+		{
+			_putchar('%');
+			return (1);
+		}
 		else
 			cmp += _putchar(format[i]);
 		i++;
