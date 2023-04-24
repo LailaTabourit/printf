@@ -13,6 +13,8 @@ int _print_string(char *s, char __attribute__((unused)) *x, char *X)
 {
 	int i, cmp = 0;
 
+	if (s == NULL)
+		s = "(null)";
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] < 32 || s[i] >= 127)
