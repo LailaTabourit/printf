@@ -3,7 +3,7 @@
 /**
 * _printf - prints formatted strings and inputs into the standard output
 * @format: format of string
-* helper - process a single conversion
+*
 * by: Lailitaaa & Megaa
 * Return: number of characters printed
 */
