@@ -27,5 +27,6 @@ int main(void)
 	_printf("Unsigned hexadecimal:[%x, %X]\n", 32, 12);
 	_printf("Character:[%c]\n", 'H');
 	_printf("%%\n");
+	_printf("%S\n", "Best\nSchool");
 	return (0):
 }
