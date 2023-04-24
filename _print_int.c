@@ -19,7 +19,6 @@ int _print_int(int n)
 			cmp += _putchar('2');
 			n %= 1000000000;
 		}
-
 		cmp += _print_int(-n);
 	}
 
