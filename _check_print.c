@@ -32,5 +32,5 @@ int _check(va_list list, char c)
 		return (_print_string(va_arg(list, char*), x, X));
 	_putchar ('%');
 	_putchar (c);
-	return (2);
+	return (0);
 }
