@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _print_string - print a string
- * @s : the string to print
- * @x : a hexadecimal (base 16) integer
- * @X : a hexadecimal (upper case)
- * by: Lailita and Megato
- * Return: string
- */
+* _print_string - print a string
+* @s : the string to print
+* @x : a hexadecimal (base 16) integer
+* @X : a hexadecimal (upper case)
+* by: Lailila and Megato
+* Return: string
+*/
 
 int _print_string(char *s, char __attribute__((unused)) *x, char *X)
 {
@@ -24,7 +24,7 @@ int _print_string(char *s, char __attribute__((unused)) *x, char *X)
 			cmp += 2;
 			if (s[i] < 16)
 				cmp += _putchar('0');
-			cmp += _print_unsigned_int((unsigned int)s[i], 16, X);
+			cmp += _print_unsigned_int((unsigned int)s[i], 16,X);
 		}
 		else
 			cmp += _putchar(s[i]);
