@@ -23,7 +23,7 @@ int _print_string(char *s, char __attribute__((unused)) *x, char *X)
 			_putchar('x');
 			if (s[i] < 16)
 				_putchar('0');
-			cmp += 3 + _print_unsigned_int((unsigned int)s[i], 16, X);
+			cmp += 2 + _print_unsigned_int((unsigned int)s[i], 16, X);
 		}
 		else
 			cmp += _putchar(s[i]);
