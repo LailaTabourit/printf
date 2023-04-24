@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
 		return (-1);
@@ -27,8 +27,6 @@ int _printf(const char *format, ...)
 			if (format[i] == '\0')
 				return (-1);
 			cmp += _check(args, format[i]);
-			if (cmp == -1)
-				return (-1);
 		}
 		else
 			cmp += _putchar(format[i]);
