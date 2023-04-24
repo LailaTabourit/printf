@@ -2,7 +2,9 @@ include "main.h"
 
 /**
  * _print_string - print a string
- * s: the string to print
+ * s : the string to print
+ * x : a hexadecimal (base 16) integer
+ * X : a hexadecimal (upper case)
  * by: Lailita and Megato
  * Return: string
  */
