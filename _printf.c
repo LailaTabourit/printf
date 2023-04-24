@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			cmp += _check(args, format[i]);
 			if (cmp == -1)
-				return(-1);
+				return (-1);
 		}
 		else
 			cmp += _putchar(format[i]);
