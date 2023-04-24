@@ -16,7 +16,7 @@ int _check(va_list list, char c)
 		return (_putchar(va_arg(list, int)));
 	else if (c == 's')
 		return (_print_str(va_arg(list, char *)));
-	else if (c == 'd' || c == 'i')
+	else if (c == 'i' || c == 'd')
 		return (_print_int(va_arg(list, int)));
 	else if (c == 'b')
 		return (_print_bin(va_arg(list, unsigned int)));
