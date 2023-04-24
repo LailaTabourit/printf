@@ -19,18 +19,18 @@ int _printf(const char *format, ...)
 	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
 		return (-1);
 	va_start(args, format);
-	while (format && format[i])
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			format++;
+			i++;
 			if (format[i] == '\0')
 				return (-1);
 			cmp += _check(args, format[i]);
 		}
 		else
 			cmp += _putchar(format[i]);
-		format++;
+		i++;
 	}
 	va_end(args);
 	return (cmp);
