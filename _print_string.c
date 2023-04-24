@@ -21,9 +21,10 @@ int _print_string(char *s, char __attribute__((unused)) *x, char *X)
 		{
 			_putchar('\\');
 			_putchar('x');
+			cmp += 2;
 			if (s[i] < 16)
-				_putchar('0');
-			cmp += 2 + _print_unsigned_int((unsigned int)s[i], 16, X);
+				cmp += _putchar('0');
+			cmp += _print_unsigned_int((unsigned int)s[i], 16, X);
 		}
 		else
 			cmp += _putchar(s[i]);
