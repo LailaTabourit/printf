@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 	va_start(args, format);
-	for (i = 0; format[i]!= '\0'; i++)
+	while(format && format[i])
 	{
 		if (format[i] == '%')
 		{
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		}
 		else
 			cmp += _putchar(format[i]);
-
+		i++;
 	}
 	va_end(args);
 	return (cmp);
