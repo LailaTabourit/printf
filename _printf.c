@@ -24,8 +24,6 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
-				return (-1);
 			cmp += _check(args, format[i]);
 		}
 		else
