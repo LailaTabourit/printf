@@ -31,7 +31,10 @@ int _check(va_list list, char c)
 	else if (c == 'S')
 		return (_print_string(va_arg(list, char*), x, X));
 	else if (c == 'p')
-		return (_print_unsigned_int((unsigned long int)va_arg(list, void *), 16, x));
+		{
+			unsigned long int p = (unsigned long int)va_arg(list, void *);
+			return (_print_unsigned_int(p, 16, x));
+		}
 	else if (c == '%')
 		return (_putchar('%'));
 	_putchar('%');
