@@ -32,6 +32,6 @@ int _print_string(char *s, char *x, char *X);
 int _pt_base(unsigned long int x, char b);
 int _print_pt(void *pt);
 int _printf(const char *format, ...);
-int revstring(va_list ap, int mode);
-char *rot13(char *s);
+int rot13(char *str);
+int rev_str(char *str);
 #endif

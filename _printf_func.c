@@ -1,51 +1,53 @@
 #include "main.h"
 
 /**
- * revstring - print the reversed string
- * @ap: string to iterate
- * @mode: usage mode
+ * ev_str - the reverse string
+ * @str: the string
  * made by megato and lailalita
- * Return: string
+ * Return: count
  */
 
-int revstring(va_list ap, int mode)
+int rev_str(char *str)
 {
-	char *s = va_arg(ap, char*);
-	int n = 0, l = strlen(s);
+	int i = 0;
+	int count = 0;
 
-	(void) mode;
-	for (n = l - 1; n >= 0; n--)
-		write(1, &s[n], 1);
-	va_end(ap);
-	return (1);
+	if (!str)
+		return (_putstr("(null)", 0));
+	while (str[i])
+		i++;
+	i--;
+	while (i >= 0)
+	{
+		count += _putchar(str[i]);
+		i--;
+	}
+	return (count);
 }
 
 /**
  * rot13 - encodes a string
- * @s : string of chars
+ * @str: the string
  * by me and her
- * Return : pointer to string
+ * Return : count
  */
 
-char *rot13(char *s)
+int rot13(char *str)
 {
-	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int a = 0, b = 0;
+	int i = 0;
+	int count = 0;
 
-	while (s[a] != '\0')
+	if (!str)
+		return (ft_putstr("(null)", 0));
+	while (str[i])
 	{
-		b = 0;
-		while (b <= 51)
-		{
-			if (s[a] == input[b])
-			{
-				s[a] = output[b];
-				break;
-			}
-			b++;
-		}
-		a++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			count += _putchar((((str[i] - 'a') + 13) % 26) + 'a');
+		else if (str[i] >= 'A' && str[i] <= 'Z')
+			count += _putchar((((str[i] - 'A') + 13) % 26) + 'A');
+		else
+			count += _putchar(str[i]);
+		i++;
 	}
-	return (s);
+	return (count);
 }
