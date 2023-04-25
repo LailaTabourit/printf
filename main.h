@@ -15,9 +15,9 @@
 
 typedef struct function_type
 {
-    char *fmt;
-    int (*op)(va_list ap, int mode);
-    int mode;
+	char *fmt;
+	int (*op)(va_list ap, int mode);
+	int mode;
 } ftype;
 
 /* --------------Prototype--------------------*/
