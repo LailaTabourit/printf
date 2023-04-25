@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _check - checks characters printed
- *@c: variable char to check
- *@list: va_list
- *Return: return 0
- */
+* _check - checks characters printed
+* @c: variable char to check
+* @list: va_list
+* Return: return 0
+*/
 
 int _check(va_list list, char c)
 {
