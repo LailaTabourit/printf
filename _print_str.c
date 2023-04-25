@@ -8,18 +8,18 @@
 * Return: number of characters printed
 */
 
-int _print_str(char *str)
+int _print_str(char *s)
 {
 	int n = 0;
 
-	if (str == NULL)
+	if (s == NULL)
 	{
 		write(1, "(null)", 6);
 		return (6);
 	}
-	while (str[n])
+	while (s[n])
 	{
-		_putchar(str[n]);
+		_putchar(s[n]);
 		n++;
 	}
 	return (n);
