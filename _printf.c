@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 		}
 		else
 			cmp += _putchar(format[i]);
+
 		i++;
 	}
 	va_end(args);
