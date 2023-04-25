@@ -13,6 +13,13 @@
 
 #define BUFF_SIZE 1024
 
+typedef struct function_type
+{
+    char *fmt;
+    int (*op)(va_list ap, int mode);
+    int mode;
+} ftype;
+
 /* --------------Prototype--------------------*/
 int _check(va_list list, char c);
 int _putchar(char c);
@@ -24,4 +31,6 @@ int _print_int(int n);
 int _print_string(char *s, char *x, char *X);
 int _print_pt(void *pt);
 int _printf(const char *format, ...);
+int revstring(va_list ap, int mode);
+char *rot13(char *s);
 #endif
