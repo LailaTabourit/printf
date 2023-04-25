@@ -7,6 +7,7 @@
 * by: laylo a& megaa
 * Return: number of characters printed
 */
+
 int _print_str(char *str)
 {
 	return (write(1, str, _strlen(str)));
