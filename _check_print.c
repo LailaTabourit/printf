@@ -30,6 +30,8 @@ int _check(va_list list, char c)
 		return (_print_unsigned_int(va_arg(list, unsigned int), 16, X));
 	else if (c == 'S')
 		return (_print_string(va_arg(list, char*), x, X));
+	else if (c == 'p')
+		return (_print_pt(va_arg(list, void *)));
 	else if (c == '%')
 		return (_putchar('%'));
 	_putchar('%');
