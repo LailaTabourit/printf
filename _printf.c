@@ -17,13 +17,13 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
-	if (!format || (format[0] == '%' && format[1]) == '\0')
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
 		return (-1);
-	while (format && *format[i])
+	while (format && format[i])
 	{
-		if (*format[i] == '%')
+		if (format[i] == '%')
 		{
 			i++;
 			cmp += _check(args, format[i]);
