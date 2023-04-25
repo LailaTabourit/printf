@@ -21,11 +21,13 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
 		return (-1);
-	while (format && format[i])
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '\0')
+				return (-1);
 			cmp += _check(args, format[i]);
 		}
 		else
