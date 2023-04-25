@@ -31,7 +31,9 @@ int _printf(const char *format, ...)
 			cmp += _check(args, format[i]);
 		}
 		else
+		{
 			cmp += _putchar(format[i]);
+		}
 
 		i++;
 	}
