@@ -21,7 +21,7 @@ typedef struct function_type
 } ftype;
 
 /* --------------Prototype--------------------*/
-int _check(va_list list, char c);
+int _check(char c, va_list list);
 int _putchar(char c);
 int _strlen(char *s);
 int _print_str(char *str);
@@ -29,6 +29,7 @@ int _print_bin(unsigned int n);
 int _print_unsigned_int(unsigned int n, int base, char *digit);
 int _print_int(int n);
 int _print_string(char *s, char *x, char *X);
+int _pt_base(unsigned long int x, char b);
 int _print_pt(void *pt);
 int _printf(const char *format, ...);
 int revstring(va_list ap, int mode);
