@@ -23,5 +23,6 @@ int _print_bin(unsigned int n);
 int _print_unsigned_int(unsigned int n, int base, char *digit);
 int _print_int(int n);
 int _print_string(char *s, char *x, char *X);
+int _print_pt(void *p);
 int _printf(const char *format, ...);
 #endif
