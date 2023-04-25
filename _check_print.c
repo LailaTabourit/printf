@@ -35,9 +35,9 @@ int _check(va_list list, char c)
 	else if (c == '%')
 		return (_putchar('%'));
 	else if (c == 'r')
-		return (rev_str(va_arg(list, char *)));
+		return (_print_rev_str(va_arg(list, char *)));
 	else if (c == 'R')
-		return (rot13(va_arg(list, char *)));
+		return (_print_rot13(va_arg(list, char *)));
 	_putchar('%');
 	_putchar(c);
 	return (2);

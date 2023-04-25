@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * ev_str - the reverse string
+ * _print_rev_str - the reverse string
  * @str: the string
  * made by megato and lailalita
- * Return: count
+ * Return: cmp
  */
 
-int rev_str(char *str)
+int _print_rev_str(char *str)
 {
-	int i = 0;
-	int count = 0;
+	int i = 0, cmp = 0;
 
 	if (!str)
-		return (_putstr("(null)", 0));
+		return (_print_str.c("(null)", 0));
 	while (str[i])
 		i++;
 	i--;
@@ -22,23 +21,22 @@ int rev_str(char *str)
 		count += _putchar(str[i]);
 		i--;
 	}
-	return (count);
+	return (cmp);
 }
 
 /**
- * rot13 - encodes a string
+ * _print_rot13 - encodes a string
  * @str: the string
  * by me and her
- * Return : count
+ * Return : cmp
  */
 
-int rot13(char *str)
+int _print_rot13(char *str)
 {
-	int i = 0;
-	int count = 0;
+	int i = 0, cmp = 0;
 
 	if (!str)
-		return (ft_putstr("(null)", 0));
+		return (_print_str.c("(null)", 0));
 	while (str[i])
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
@@ -49,5 +47,5 @@ int rot13(char *str)
 			count += _putchar(str[i]);
 		i++;
 	}
-	return (count);
+	return (cmp);
 }
