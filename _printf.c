@@ -15,22 +15,21 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (!format)
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	if (!format || (format[0] == '%' && format[1] == '\0'))
+	if (format[0] == '%' && format[1] == ' ' && format[2])
 		return (-1);
-	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
-		return (-1);
-	while (format && format[i])
+	while (format && *format)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
 			i++;
 			cmp += _check(args, format[i]);
 		}
 		else
-			cmp += _putchar(format[i]);
-		i++;
+			cmp += _putchar(*format);
+
+		format++;
 	}
 	va_end(args);
 	return (cmp);
