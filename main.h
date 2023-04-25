@@ -14,7 +14,7 @@
 #define BUFF_SIZE 1024
 
 /* --------------Prototype--------------------*/
-int _check(va_list list, char c);
+int _check(char c, va_list list);
 int _putchar(char c);
 int _strlen(char *s);
 int _print_str(char *str);
