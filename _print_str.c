@@ -14,7 +14,7 @@ int _print_str(char *str)
 
 	if (str == NULL)
 	{
-		write(1, "(null)", _strlen(str));
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (str[n])
