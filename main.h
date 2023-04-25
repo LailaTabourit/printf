@@ -21,7 +21,7 @@ typedef struct function_type
 } ftype;
 
 /* --------------Prototype--------------------*/
-int _check(char c, va_list list);
+int _check(va_list list, char c);
 int _putchar(char c);
 int _strlen(char *s);
 int _print_str(char *str);

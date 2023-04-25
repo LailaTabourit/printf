@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-			cmp += _check(format[i], args);
+			cmp += _check(args, format[i]);
 		}
 		else
 			cmp += _putchar(format[i]);
