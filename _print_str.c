@@ -10,17 +10,17 @@
 
 int _print_str(char *str)
 {
-	int n = 0;
+	int i = 0;
 
 	if (str == NULL)
 	{
 		write(1, "(null)", 6);
 		return (6);
 	}
-	while (str[n])
+	while (str[i])
 	{
-		_putchar(str[n]);
-		n++;
+		_putchar(str[i]);
+		i++;
 	}
-	return (n);
+	return (i);
 }
