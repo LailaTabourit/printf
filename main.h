@@ -13,13 +13,6 @@
 
 #define BUFF_SIZE 1024
 
-typedef struct function_type
-{
-	char *fmt;
-	int (*op)(va_list ap, int mode);
-	int mode;
-} ftype;
-
 /* --------------Prototype--------------------*/
 int _check(va_list list, char c);
 int _putchar(char c);
