@@ -12,6 +12,7 @@ int _pt_base(unsigned long int x, char b)
 	int i = 0, l, n;
 	char *X = "0123456789abcdef";
 	char m[64];
+
 	if (x == 0)
 		return (-1);
 	while (x)
