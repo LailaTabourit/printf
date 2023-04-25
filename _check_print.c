@@ -31,7 +31,7 @@ int _check(va_list list, char c)
 	else if (c == 'S')
 		return (_print_string(va_arg(list, char*), x, X));
 	else if (c == 'p')
-		return (_print_pt(va_arg(list, void *)));
+		return (c += (_print_pt(va_arg(list, void *))));
 	else if (c == '%')
 		return (_putchar('%'));
 	_putchar('%');
