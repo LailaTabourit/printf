@@ -1,6 +1,38 @@
 #include "main.h"
 
 /**
+ * ft_putstr - putstring
+ * @str : string
+ * made by lalita and megato
+ * @cheack : cheack 0 or 1
+ * Return: count
+ */
+
+int	_print_putstr(char *str, int cheack)
+{
+	int i = 0;
+	int cmp = 0;
+
+	if (!str)
+		str = "(null)";
+	while (str[i])
+	{
+		if (((str[i] > 0 && str[i] < 32) || str[i] >= 127) && cheack)
+		{
+			cmp += _putchar('\\');
+			cmp += _putchar('x');
+			if (str[i] < 16)
+				cmp += _putchar('0');
+			cmp += _print_unsigned_int((unsigned int)s[i], 16, X);
+		}
+		else
+			cmp += _putchar(str[i]);
+		i++;
+	}
+	return (cmp);
+}
+
+/**
  * _print_rev_str - the reverse string
  * @str: the string
  * made by megato and lailalita
@@ -12,7 +44,7 @@ int _print_rev_str(char *str)
 	int i = 0, cmp = 0;
 
 	if (!str)
-		return (_print_str("(null)", 0));
+		return (_print_putstr("(null)", 0));
 	while (str[i])
 		i++;
 	i--;
@@ -36,7 +68,7 @@ int _print_rot13(char *str)
 	int i = 0, cmp = 0;
 
 	if (!str)
-		return (_print_str("(null)", 0));
+		return (_print_putstr("(null)", 0));
 	while (str[i])
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')

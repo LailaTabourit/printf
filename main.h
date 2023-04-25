@@ -34,4 +34,5 @@ int _print_pt(void *pt);
 int _printf(const char *format, ...);
 int _print_rot13(char *str);
 int _print_rev_str(char *str);
+int _print_putstr(long int n);
 #endif
