@@ -11,8 +11,8 @@
 int _print_pt(void *pt)
 {
 	int cmp = 0;
-	long int n;
-	char *x = "0123456789abcdefABCDEF";
+	unsigned int n;
+
 	if (!pt)
 	{
 		cmp += _print_str("(nil)");
@@ -20,7 +20,7 @@ int _print_pt(void *pt)
 	}
 	n = (unsigned long int)pt;
 	cmp += _print_str("0x");
-	cmp += _print_unsigned_int(n, 16, x);
+	cmp += _print_unsigned_int(n, 16, "0123456789abcdef");
 	return (cmp);
 }
 
