@@ -4,7 +4,7 @@
 * _print_bin - print the binary of an unsigned int
 * @n: unsigned integer
 *
-* by: Me and him
+* by: Me and him ^^
 * Return: number of characters printed
 */
 

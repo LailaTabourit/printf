@@ -4,6 +4,7 @@
 * _check - checks characters printed
 * @c: variable char to check
 * @list: va_list
+* made by megato and lailita
 * Return: return 0
 */
 
