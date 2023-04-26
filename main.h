@@ -31,7 +31,7 @@ int _print_unsigned_int(unsigned int n, int base, char *digit);
 int _print_int(int n);
 int _print_string(char *s, char *x, char *X);
 int _pt_base(unsigned long int x, char b);
-int _print_flag(char c, struct flag *F);
+int _print_flag(char c, struct flag *f);
 int _print_pt(void *pt);
 int _printf(const char *format, ...);
 #endif

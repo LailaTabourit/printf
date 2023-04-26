@@ -2,30 +2,28 @@
 /**
 * _print_flag - get flags
 * @c : character
-* @F : pointer on struct flags
+* @f : pointer on struct flags
 *
 * by : Megaa and laila
 * Return: 1 if the flag is present, and 0 otherwise
 */
 
-int _print_flag(char c, struct flag *F)
+int _print_flag(char c, struct flag *f)
 {
 	int n = 0;
 
 	switch (c)
 	{
 		case '+':
-			F->plus = 1;
-			n = 1;
-			break;
+			f->plus = 1;
+			return (1);
 		case ' ':
-			F->space = 1;
-			n = 1;
-			break;
+			f->space = 1;
+			return (1);
 		case '#':
-			F->hash = 1;
-			n = 1;
-			break;
+			f->hash = 1;
+			return (1);
+		default:
+			return (n);
 	}
-	return (n);
 }
