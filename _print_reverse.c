@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _rev_str - prints the reversed string
+ * _print_reverse- prints the reversed string
  * @list: list printed
  * made by Lailita and Megato ^^
  *
@@ -11,7 +11,7 @@
 int _print_reverse(va_list list)
 {
 	int i = 0, j = 0;
-	char c = va_arg(list, char);
+	char *c = va_arg(list, char *);
 
 	if (!c)
 		return (_print_str("null"));
