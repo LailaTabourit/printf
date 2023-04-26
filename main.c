@@ -2,7 +2,7 @@
 
 /**
 * main - Entry point
-*
+*1
 * Return: Always 0
 * made by lailita and megato
 */
