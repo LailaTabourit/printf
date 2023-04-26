@@ -10,7 +10,6 @@
 
 int _print_flag(char c, struct flag *f)
 {
-	int n = 0;
 
 	switch (c)
 	{
@@ -24,6 +23,6 @@ int _print_flag(char c, struct flag *f)
 			f->hash = 1;
 			return (1);
 		default:
-			return (n);
+			return (0);
 	}
 }
