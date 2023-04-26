@@ -4,7 +4,7 @@
 * _printf - prints formatted strings and inputs into the standard output
 * @format: format of string
 *
-* by: Lailitaaa & Megaa
+* by: Lailitaaa & Megaa ^^
 * Return: number of characters printed
 */
 
