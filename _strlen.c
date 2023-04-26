@@ -4,7 +4,7 @@
 * _strlen - count the length of string
 * @s: string
 *
-* by: lailitaa and megaa
+* by: lailitaa and megaa ^^
 * Return: the length
 */
 
