@@ -25,7 +25,4 @@ int _print_string(char *s, char *x, char *X);
 int _pt_base(unsigned long int x, char b);
 int _print_pt(void *pt);
 int _printf(const char *format, ...);
-int _print_rot13(char *str);
-int _print_rev_str(char *str);
-int _print_putstr(long int n);
 #endif
