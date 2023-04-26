@@ -3,15 +3,16 @@
 /**
  * _print_reverse- prints the reversed string
  * @list: list printed
+ * @c: pointer
  * made by Lailita and Megato ^^
  *
  * Return: reversed string
  */
 
-int _print_reverse(va_list list)
+int _print_reverse(va_list list, char *c)
 {
 	int i = 0, j = 0;
-	char *c = va_arg(list, char *);
+	c = va_arg(list, char *);
 
 	if (!c)
 		return (_print_str("null"));
