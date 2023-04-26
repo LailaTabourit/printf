@@ -4,7 +4,7 @@
 * _pt_base - function convert to hexa
 * @x: number
 * @b: base
-* by : us
+* by : us ^^
 * Return: hexadecimal
 */
 int _pt_base(unsigned long int x, char b)
