@@ -5,7 +5,7 @@
 * @s : the string to print
 * @x : a hexadecimal (base 16) integer
 * @X : a hexadecimal (upper case)
-* by: Lailila and Megato 
+* by: Lailila and Megato ^^
 * Return: string
 */
 
