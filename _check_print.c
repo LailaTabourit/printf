@@ -12,6 +12,7 @@ int _check(va_list list, char c)
 {
 	char *x = "0123456789abcdef";
 	char *X = "0123456789ABCDEF";
+	flag_t flag = {0};
 
 	if (c == 'c')
 		return (_putchar(va_arg(list, int)));
@@ -35,7 +36,12 @@ int _check(va_list list, char c)
 		return (_print_pt(va_arg(list, void *)));
 	else if (c == '%')
 		return (_putchar('%'));
+	else if (_print_flag(c, &flag))
+		return (1);
 	_putchar('%');
+	if (flag.plus) _putchar('+');
+	if (flag.space) _putchar(' ');
+	if (flag.hash) _putchar('#');
 	_putchar(c);
 	return (2);
 }
