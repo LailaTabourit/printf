@@ -32,5 +32,5 @@ int _pt_base(unsigned long int x, char b);
 int _print_pt(void *pt);
 int _printf(const char *format, ...);
 int _print_flag(char c, struct flag *f);
-
+int _print_rev(char *c);
 #endif
