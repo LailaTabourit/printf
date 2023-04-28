@@ -4,7 +4,7 @@
 * _print_int - prints integer into the standard output
 * @n: integer
 *
-* by: Lailitaa & Megaa
+* by: Lailitaa & Megaa ^^
 * Return: number of characters printed
 */
 int _print_int(int n)
