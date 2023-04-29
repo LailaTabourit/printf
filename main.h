@@ -33,4 +33,5 @@ int _print_pt(void *pt);
 int _printf(const char *format, ...);
 int _print_flag(char c, struct flag *f);
 int _print_rev(char *c);
+int _print_rot(char *c);
 #endif
